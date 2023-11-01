@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick="clique()" id="h1">Clique aqui!</h1>
+    <p id="qtd">5</p>
+</body>
+</html>
+
+<style>
+    body{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(90deg, rgb(36, 0, 0) 0%, rgb(121, 9, 9) 35%, rgb(255, 93, 93) 100%);
+        flex-direction: column;
+    }
+    #h1,#qtd{
+        color: white;
+    }
+</style>
+
+<script>
+    let i = 0
+    
+    function clique()
+    {
+          if(i == 0){
+            document.getElementById("h1").textContent = 'I'
+    }else if(i == 1){
+            document.getElementById("h1").textContent = 'Love'
+    }else if(i == 2){
+            document.getElementById("h1").textContent = 'U'
+    }else if(i == 3){
+            document.getElementById("h1").textContent = '❤'
+    }else if(i == 4){
+            document.getElementById("h1").textContent = 'A&E'   
+    }else if(i == 5){
+        document.getElementById("h1").textContent = 'Clique aqui!'
+        i = 0
+    } 
+    document.getElementById("qtd").textContent = 5 - i
+    document.getElementById("qtd").textContent = document.getElementById("qtd").textContent - 1
+    i++   
+    }
+</script>
